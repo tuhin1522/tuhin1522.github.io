@@ -1,16 +1,76 @@
-# React + Vite
+# Md Tuhin Molla – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer portfolio built with **React** and **Tailwind CSS**, designed to showcase AI/ML projects, full-stack expertise, and recruiter-friendly impact.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Clean, modern UI with responsive layouts
+- AI project highlights with filters (AI/ML, Web, Backend, Data & Analytics)
+- Reusable React components and centralized content data
+- Dark mode toggle with persistent preference
+- Recruiter-optimized copy and action-driven project summaries
 
-## React Compiler
+## 🧰 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React + Vite**
+- **Tailwind CSS**
+- **JavaScript**
 
-## Expanding the ESLint configuration
+## 📁 Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+.
+├── public/
+├── src/
+│   ├── components/          # Reusable UI components
+│   ├── data/                # Portfolio content (projects, skills, contact)
+│   ├── App.jsx              # Page layout
+│   ├── index.css            # Tailwind + custom styles
+│   └── main.jsx             # App entry
+├── index.html
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
+```
+
+## 🚀 Getting Started
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Start the dev server
+
+```bash
+npm run dev
+```
+
+### 3) Build for production
+
+```bash
+npm run build
+```
+
+### 4) Preview the production build
+
+```bash
+npm run preview
+```
+
+## 🛠️ Customization
+
+Update the portfolio content in:
+
+```
+src/data/portfolio.js
+```
+
+You can add new projects, update skills, change highlights, and edit contact links from one place.
+
+## 📬 Contact
+
+- **GitHub:** https://github.com/tuhin1522
+- **LinkedIn:** https://www.linkedin.com/in/md-tuhin-molla15/
+- **Email:** mdtuhin1499@gmail.com
