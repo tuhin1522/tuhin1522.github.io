@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  // Changed from '/' to './' to ensure relative paths for assets
+  base: './', 
   plugins: [react()],
 })
