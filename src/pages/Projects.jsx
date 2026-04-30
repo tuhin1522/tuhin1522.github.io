@@ -90,7 +90,7 @@ export default function Projects() {
             Projects & <span className="text-gradient">Work</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
-            AI-powered products and data-driven platforms — each emphasizing measurable impact and clean architecture.
+            Projects focused on AI applications, full-stack development, and practical problem solving.
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, center = fals
       {eyebrow && (
         <span className="badge-ai text-xs font-semibold uppercase tracking-widest">{eyebrow}</span>
       )}
-      <h2 className={`mt-3 font-display text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl ${center ? '' : ''}`}>
+      <h2 className="mt-3 font-display text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">
         {title}
       </h2>
       {subtitle && (

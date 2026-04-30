@@ -4,7 +4,7 @@ export const profile = {
   role: 'Software Engineer & AI Engineer',
   roles: ['Software Engineer', 'Full-Stack AI/ML Engineer'],
   tagline: 'Building intelligent, scalable products with LLMs, RAG pipelines, and modern web stacks.',
-  intro: 'I design end-to-end AI products that blend strong UX with reliable backend systems—from medical chatbots to intelligent story-generation platforms.',
+  intro: 'I design end-to-end AI products that blend strong UX with reliable backend systems from medical chatbots to intelligent story-generation platforms.',
   bio: `I'm a passionate Software and AI Engineer with a strong foundation in building production-ready applications. I specialize in developing LLM-powered tools, RAG pipelines, and full-stack web platforms that solve real-world problems.\n\nMy work spans from ideation—understanding user needs and business constraints—all the way to deployment and iteration. I enjoy working at the intersection of AI and product, turning cutting-edge research into usable, impactful software.\n\nWhether it's a medical Q&A chatbot, a story generation engine, or a civic-tech platform, I focus on reliability, clarity, and measurable impact.`,
   focusAreas: [
     'LLM applications & RAG systems',
@@ -48,29 +48,29 @@ export const experience = [
 
 export const skillGroups = [
   {
-    title: 'AI & Machine Learning',
+    title: 'Machine Learning & Deep Learning',
     icon: '🤖',
-    items: ['Python', 'LLMs & RAG', 'LangChain', 'ChromaDB', 'Ollama', 'Deep Learning', 'Computer Vision', 'Scikit-learn'],
+    items: ['Regression', 'Ensemble Learning', 'Feature Engineering', 'Naive Bayes', 'Unsupervised Learning', 'Reinforcement Learning', 'CNNs', 'RNNs', 'Transformers', 'Computer Vision'],
   },
   {
-    title: 'Backend Engineering',
+    title: 'Generative AI & LLMs',
+    icon: '🤖',
+    items: ['Prompt Engineering', 'LLM Fine-Tuning', 'RAG', 'Vector Databases', 'Hugging Face', 'Agents'],
+  },
+  {
+    title: 'Backend Engineering & Libraries',
     icon: '⚙️',
-    items: ['FastAPI', 'Django / DRF', 'Node.js', 'PostgreSQL', 'MySQL', 'REST APIs', 'JWT Auth'],
+    items: ['FastAPI', 'PostgreSQL', 'MySQL', 'ChromaDB', 'OpenCV', 'PyTorch', 'Numpy', 'REST APIs', 'JWT Auth', 'Pandas', 'Matplotlib', 'Scikit-learn', 'LangChain', 'LangGraph'],
   },
   {
     title: 'Frontend & UX',
     icon: '🎨',
-    items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Responsive Design'],
+    items: ['React', 'Vite', 'Tailwind CSS', 'Responsive Design'],
   },
   {
-    title: 'Data & Analytics',
-    icon: '📊',
-    items: ['SQL Analytics', 'Schema Design', 'Business Intelligence', 'LSTM Forecasting'],
-  },
-  {
-    title: 'DevOps & Tools',
+    title: 'Tools',
     icon: '🛠️',
-    items: ['Git & GitHub', 'Docker (basic)', 'Linux', 'Postman', 'VS Code'],
+    items: ['Git & GitHub', 'Docker', 'Linux', 'CI/CD', 'n8n', 'DVC', 'MLflow'],
   },
 ]
 
@@ -214,8 +214,60 @@ export const contact = {
   github: 'https://github.com/tuhin1522',
   linkedin: 'https://www.linkedin.com/in/md-tuhin-molla15/',
   location: 'Dhaka, Bangladesh',
-  availability: 'Open to full-time roles, freelance projects, and AI consulting.',
+  availability: 'Open to full-time roles in software engineering and AI.',
 }
+
+export const achievements = [
+  {
+    year: '2025',
+    rank: 'Top 29% (44/151)',
+    event: 'National Datathon CUET CSE FEST 2025',
+    icon: '📊'
+  },
+  {
+    year: '2025',
+    rank: 'Top 17% (8/47)',
+    event: 'TechMind Hackathon 2025 at JKKNIU',
+    icon: '💡'
+  },
+  {
+    year: '2025',
+    rank: 'Top 9% (5/55)',
+    event: 'UIU CSE FEST 2025 (LFR)',
+    icon: '🤖'
+  },
+  {
+    year: '2024',
+    rank: 'Top 14% (50/500)',
+    event: 'NASA Space Apps Challenge 2024',
+    icon: '🚀'
+  },
+  {
+    year: '2024',
+    rank: 'Top 11% (3/27)',
+    event: 'Intra JKKNIU programming contest 2024',
+    icon: '💻'
+  },
+  {
+    year: '2023',
+    rank: 'Top 7% (4/51)',
+    event: 'Hult Prize on Campus Program at JKKNIU',
+    icon: '🌍'
+  },
+  {
+    year: '2023',
+    rank: 'Top 12% (6/48)',
+    event: 'Robo Tech Olympiad 2023 (LFR)',
+    icon: '⚙️'
+  },
+  {
+    year: '',
+    rank: '550+ DSA solved',
+    event: 'Competitive Programming',
+    icon: '🏆'
+  }
+]
+
 
 // Legacy exports
 export const filters = ['All', 'AI/ML', 'Web', 'Backend', 'Data & Analytics']

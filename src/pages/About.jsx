@@ -21,10 +21,10 @@ export default function About() {
         <div className="section-inner fade-in text-center">
           <span className="badge-ai text-xs font-semibold uppercase tracking-widest">About Me</span>
           <h1 className="mt-4 font-display text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-            Product-focused Engineer<br />with an <span className="text-gradient">AI-first</span> mindset
+            Software Engineer focused on building product-driven <span className='text-gradient'>AI applications</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg leading-relaxed">
-            I translate complex AI capabilities into production-ready products—ensuring scalability, clarity, and measurable impact.
+             I build AI-powered projects that turn complex ideas into practical, real-world solutions, with a focus on learning and scalability.
           </p>
         </div>
       </section>

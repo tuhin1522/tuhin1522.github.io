@@ -1,29 +1,50 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 import { profile } from '../data/portfolio'
 
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Blogs', href: '/blogs' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Education', href: '#education' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Project', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar({ theme, onToggleTheme }) {
-  const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('#home')
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', fn, { passive: true })
     return () => window.removeEventListener('scroll', fn)
   }, [])
+
+  // Highlight active link based on scroll position
   useEffect(() => {
-    let t = setTimeout(() => setMenuOpen(false), 0)
-    return () => clearTimeout(t)
-  }, [pathname])
+    const handleScroll = () => {
+      let current = '#home'
+      for (const link of navLinks) {
+        const section = document.querySelector(link.href)
+        if (section) {
+          const rect = section.getBoundingClientRect()
+          // If the section is within the top portion of the screen
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = link.href
+            break
+          } else if (rect.top <= 100) {
+            current = link.href
+          }
+        }
+      }
+      setActiveSection(current)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll() // Initialize
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
@@ -32,23 +53,23 @@ export default function Navbar({ theme, onToggleTheme }) {
       }`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link to="/" className="font-display text-lg font-bold text-slate-900 transition hover:text-indigo-500 dark:text-white">
+        <a href="#home" className="font-display text-lg font-bold text-slate-900 transition hover:text-indigo-500 dark:text-white">
           <span className="text-gradient">{'<'}</span>
           {profile.shortName}
           <span className="text-gradient">{'/>'}</span>
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-1 md:flex">
           {navLinks.map(link => {
-            const active = pathname === link.href
+            const active = activeSection === link.href
             return (
-              <Link key={link.href} to={link.href}
+              <a key={link.href} href={link.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${active
                   ? 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-300'
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800/60 dark:hover:text-white'
                   }`}>
                 {link.label}
-              </Link>
+              </a>
             )
           })}
         </nav>
@@ -78,15 +99,15 @@ export default function Navbar({ theme, onToggleTheme }) {
         <div className="border-t border-slate-200/70 bg-white/95 backdrop-blur-xl dark:border-slate-800/70 dark:bg-midnight/95 md:hidden">
           <nav className="mx-auto max-w-6xl space-y-1 px-6 py-4">
             {navLinks.map(link => {
-              const active = pathname === link.href
+              const active = activeSection === link.href
               return (
-                <Link key={link.href} to={link.href} onClick={() => setMenuOpen(false)}
+                <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}
                   className={`flex w-full rounded-xl px-4 py-3 text-sm font-medium transition ${active
                     ? 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-300'
                     : 'text-slate-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800/50'
                     }`}>
                   {link.label}
-                </Link>
+                </a>
               )
             })}
           </nav>

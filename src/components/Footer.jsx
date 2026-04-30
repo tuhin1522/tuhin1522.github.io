@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+
 import { profile, contact } from '../data/portfolio'
 
 export default function Footer() {
@@ -7,16 +7,16 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
           <div>
-            <Link to="/" className="font-display text-lg font-bold text-slate-900 dark:text-white">
+            <a href="#home" className="font-display text-lg font-bold text-slate-900 dark:text-white">
               <span className="text-gradient">{'<'}</span>{profile.shortName}<span className="text-gradient">{'/>'}</span>
-            </Link>
+            </a>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{profile.role}</p>
             <p className="mt-0.5 text-xs text-slate-400 dark:text-slate-500">{contact.location}</p>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
-            {[['Home','/'],['About','/about'],['Projects','/projects'],['Blogs','/blogs'],['Contact','/contact']].map(([label, to]) => (
-              <Link key={to} to={to} className="hover:text-indigo-500 transition">{label}</Link>
+            {[['Home','#home'],['About','#about'],['Education','#education'],['Skills','#skills'],['Project','#projects'],['Contact','#contact']].map(([label, to]) => (
+              <a key={to} href={to} className="hover:text-indigo-500 transition">{label}</a>
             ))}
           </nav>
 
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-slate-200/60 pt-6 text-center text-xs text-slate-400 dark:border-slate-800/60">
-          © {new Date().getFullYear()} {profile.name} · Built with React & Tailwind CSS
+          © {new Date().getFullYear()} {profile.name} · Built with passion & clean code
         </div>
       </div>
     </footer>
