@@ -18,7 +18,7 @@ export const profile = {
     'Analytics-driven decision support for businesses and institutions',
     'Collaborative open-source contributor with cross-team experience',
   ],
-  resumeUrl: '/resume.pdf',
+  resumeUrl: 'https://drive.google.com/drive/folders/10S8N3wwhilJm8NSd5awvWbFpV97ak82l',
 }
 
 export const education = [
@@ -266,6 +266,27 @@ export const achievements = [
     event: 'Competitive Programming',
     icon: '🏆'
   }
+]
+
+export const certificates = [
+  {
+    title: 'AI Engineer for Developers Associate Professional Certificate',
+    credentialId: 'AIEDA0011589600565',
+    issuer: 'Salesforce',
+    date: '2025',
+    icon: '🏅',
+    color: 'indigo',
+    viewUrl: 'https://drive.google.com/file/d/13IOMze4Mhn015XEmsS2HFevCKwdd7VnS/view?usp=sharing',
+  },
+  {
+    title: 'Associate AI Engineer for Developers Track Completion Certificate',
+    credentialId: null,
+    issuer: 'Salesforce',
+    date: '2025',
+    icon: '🎖️',
+    color: 'violet',
+    viewUrl: 'https://drive.google.com/file/d/1PakOsxBYcIaxsXdz8KWvW3eSvBN_vFLX/view?usp=sharing',
+  },
 ]
 
 
